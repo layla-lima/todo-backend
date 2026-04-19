@@ -28,10 +28,7 @@ const mongoose = require('mongoose');
 
 var mongoURL = process.env.MONGO_URL;
 
-mongoose.connect(mongoURL, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-});
+mongoose.connect(mongoURL);
 
 mongoose.Promise = global.Promise;
 
