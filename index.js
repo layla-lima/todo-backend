@@ -43,6 +43,18 @@ db.once('connected', () => {
 });
 
 // Servidor
+
+app.get('/', (req, res) => {
+    res.send(`
+        <h1>🚀 Backend rodando na nuvem!</h1>
+        <p>Sua API está online com sucesso.</p>
+        <p>Para testar, acesse:</p>
+        <a href="https://todo-backend-ij9z.onrender.com/api/getAll">
+            /api/getAll
+        </a>
+    `);
+});
+
 app.listen(PORT, () => {
     console.log(`Server Started at ${PORT}`)
 });
